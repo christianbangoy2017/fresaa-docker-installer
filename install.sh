@@ -45,6 +45,8 @@ echo "[3/7a Unzip frontend]"
 sudo unzip frontend.zip
 echo "[3/7b Unzip backend]"
 sudo unzip backend.zip
+echo "[3/7c Unzip database]"
+sudo unzip database.zip
 
 
 cp -r $REPO_DIR/backend/* $DEPLOY_DIR/backend/
