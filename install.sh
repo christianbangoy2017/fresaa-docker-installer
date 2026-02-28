@@ -40,6 +40,13 @@ echo "[3/7] Copying project files..."
 mkdir -p $DEPLOY_DIR/backend
 mkdir -p $DEPLOY_DIR/frontend
 
+
+echo "[3/7a Unzip frontend]"
+sudo unzip frontend.zip
+echo "[3/7b Unzip backend]"
+sudo unzip backend.zip
+
+
 cp -r $REPO_DIR/backend/* $DEPLOY_DIR/backend/
 cp -r $REPO_DIR/frontend/* $DEPLOY_DIR/frontend/
 cp $REPO_DIR/docker-compose.yml $DEPLOY_DIR/
