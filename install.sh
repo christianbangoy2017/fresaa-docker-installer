@@ -37,16 +37,20 @@ sudo chown -R $USER:$USER $DEPLOY_DIR
 # 3. Copy project files
 # -------------------------------
 echo "[3/7] Copying project files..."
+rm -rf $DEPLOY_DIR/backend
+rm -rf $DEPLOY_DIR/frontend
+
 mkdir -p $DEPLOY_DIR/backend
 mkdir -p $DEPLOY_DIR/frontend
 
 
 echo "[3/7a Unzip frontend]"
-sudo unzip frontend.zip
+
+sudo unzip -o frontend.zip
 echo "[3/7b Unzip backend]"
-sudo unzip backend.zip
+sudo unzip -o backend.zip
 echo "[3/7c Unzip database]"
-sudo unzip database.zip
+sudo unzip -o database.zip
 
 
 cp -r $REPO_DIR/backend/* $DEPLOY_DIR/backend/
